@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+source /home/icart/catkin_ws/devel/setup.bash;
+gnome-terminal -- bash -c " roslaunch orne_bringup orne_alpha.launch; bash" 
+sleep 3
+gnome-terminal -- bash -c "roslaunch icart_mini_driver teleop_joy.launch; bash"
+
+#source /opt/ros/kinetic/setup.bash;

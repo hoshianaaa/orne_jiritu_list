@@ -1,0 +1,16 @@
+#!/bin/bash
+  declare -i COUNTER
+  declare -i TMP_NUM
+  TMP_NUM=1
+  COUNTER=1
+  while :
+    do
+      echo "$COUNTER"回目の繰り返しです。
+      rosservice call /start_nav 
+      let COUNTER++
+            # COUNTER++が処理された後、COUNTERがTMP_NUMより小さくなることはないため、条件が「真」になることはない。
+                  if [ "$COUNTER" -le "$TMP_NUM" ]; then
+                            echo "終了します。"
+                                    break
+                                          fi
+                                          done

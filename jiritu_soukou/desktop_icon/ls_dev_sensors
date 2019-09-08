@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+gnome-terminal -- bash -c " ls /dev/sensors;sleep 5" 
+

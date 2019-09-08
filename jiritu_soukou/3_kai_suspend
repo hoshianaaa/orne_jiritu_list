@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+source /home/icart/catkin_ws/devel/setup.bash;
+gnome-terminal -- bash -c "roslaunch orne_bringup orne_alpha.launch; bash" 
+sleep 3
+gnome-terminal -- bash -c "roslaunch orne_bringup vlp16.launch; bash"
+sleep 3
+gnome-terminal -- bash -c "roslaunch orne_navigation_executor play_waypoints_nav_alpha.launch map_file:=/home/icart/map/3_kai waypoints_file:=/home/icart/waypoints_file/3_kai.yaml init_pos_file:=/home/icart/init_pose_file/3_kai.yaml suspend:=true suspend_file:=/home/icart/suspend/3_kai.yaml;bash"
+
+

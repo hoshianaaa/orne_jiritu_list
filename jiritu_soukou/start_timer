@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sleep 10
+rosservice call /start_nav 
+echo "hello"
+            

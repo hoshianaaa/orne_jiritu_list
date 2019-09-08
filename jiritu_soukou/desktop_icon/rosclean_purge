@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+source /home/icart/catkin_ws/devel/setup.bash;
+gnome-terminal -- bash -c " echo y | rosclean purge;sleep 5" 
+
